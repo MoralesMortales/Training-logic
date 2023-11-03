@@ -15,7 +15,6 @@ def translator(text):
 
     return res
 
-
 text=input("Texto a traducir: ")
 print((f"Escribiste {text}"))
-print(f"El resultado de la traduccion es {translator(text)} ")
+print(f"El resultado de la traduccion es {translator(text)}. ")
