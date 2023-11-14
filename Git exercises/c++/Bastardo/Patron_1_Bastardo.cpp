@@ -1,3 +1,9 @@
+/* [X] [ ] [X] [ ] 
+   [ ] [X] [ ] [X] 
+   [O] [ ] [O] [ ]
+   [ ] [O] [ ] [O]  
+ */
+
 #include <iostream>
 
 int main(){
