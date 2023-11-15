@@ -1,12 +1,13 @@
-//Se ve como un buscaminas
+// Se ve como un buscaminas
 #include <iostream>
-int main(){
+int main()
+{
 
-char values[15][15];
-int limits = 15;
-int center = 7;
-int range = 3;
-int lead;
+   char values[15][15];
+   int limits = 15;
+   int center = 7;
+   int range = 3;
+   int lead;
 
    for (int f = 0; f < limits; f++)
    {
@@ -15,72 +16,64 @@ int lead;
          values[f][s] = ' ';
       }
    }
-   
-   std::cout<<"Rango\n";
-   std::cin>>lead;
-int OP = (lead * 2) + 1;
-for (int i = 0; i < lead; i++)
-{
- 
-}
 
-values[center][center]='O';
-for (int newe = 1; newe < lead + 1; newe++)
-{
-   if (lead == 1)
+   std::cout << "Rango\n";
+   std::cin >> lead;
+   int OP = (lead * 2) + 1;
+   for (int i = 0; i < lead; i++)
    {
-      
-    int fnew = center - newe;
-    int fnews = fnew;
-    values[fnew][fnew]='X';
-    
-    for (int i = 1; i < ((lead*2)+1); i++)
-    {
-      values[fnew + i][fnews]='X';
-      values[fnews][fnew + i]='X';
+   }
 
-      if (i == (lead*2))
+   values[center][center] = 'O';
+   for (int newe = 1; newe < lead + 1; newe++)
+   {
+      int formula = ((lead * 2) + 1);
+      if (lead == 1)
       {
-         int ii = i;
-         for (int i = ii; i <= ((lead*2)+1); i++)
+
+         int fnew = (center - newe);
+         int fnews = fnew;
+
+         values[fnew][fnew] = 'X';
+
+         for (int i = 1; i < formula; i++)
          {
-            values[i][fnews]='u';
-            values[fnews][fnew + i]='u';
+            int new1 = fnew + i;
+            values[new1][fnews] = 'X';
+            values[fnews][new1] = 'X';
+            std::cout << i << "\n";
+            std::cout << new1 << " _\n";
+            std::cout << fnew << "\n";
+            if (new1 == (lead * 2))
+            {
+               std::cout << "vvvvvvvv";
+               int ii = new1;
+               for (int vi = ii; vi <= formula; vi++)
+               {
+                  for (int rest = 0; rest < 2; rest++)
+                  {
+                     values[4][fnews - rest] = 'u';
+                     values[fnews - rest][4] = 'u';
+                  }
+               }
+
+               values[fnew + i][fnews] = 'X';
+            }
          }
-         
-      values[fnew + i][fnews]='X';
       }
-      
-    }
-    
-    for (int i = 1; i < ((lead*2)+1); i++)
-    {
-      values[fnew + i][fnews]='X';
-      values[fnews][fnew + i]='X';
-    }
-    
-   
-}
-
-
-
- 
-}
-
-
+   }
 
    for (int f = 0; f < limits; f++)
    {
       for (int s = 0; s < limits; s++)
       {
-         std::cout<<"["<<values[f][s]<<"]";
+         std::cout << "[" << values[f][s] << "]";
          if (s == 14)
          {
-            std::cout<<"\n";
+            std::cout << "\n";
          }
-         
       }
    }
 
-    return 0;
+   return 0;
 }
