@@ -37,6 +37,13 @@ for (int newe = 1; newe < lead + 1; newe++)
     for (int i = 1; i < ((lead*2)+1); i++)
     {
       values[fnew + i][fnews]='X';
+      values[fnews][fnew + i]='X';
+    }
+    
+    for (int i = 1; i < ((lead*2)+1); i++)
+    {
+      values[fnew + i][fnews]='X';
+      values[fnews][fnew + i]='X';
     }
     
    
