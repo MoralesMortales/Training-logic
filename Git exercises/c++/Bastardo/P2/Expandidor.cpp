@@ -19,14 +19,13 @@ int main()
 
    std::cout << "Rango\n";
    std::cin >> lead;
-   int OP = (lead * 2) + 1;
-   for (int i = 0; i < lead; i++)
-   {
-   }
+
+
 
    values[center][center] = 'O';
    for (int newe = 1; newe < lead + 1; newe++)
    {
+
       int formula = ((lead * 2) + 1);
       if (lead == 1)
       {
@@ -34,20 +33,23 @@ int main()
          int fnew = (center - newe);
          int fnews = fnew;
 
+         std::cout << "1 Fnew es = a ";
+         std::cout << fnew;
+
          values[fnew][fnew] = 'X';
 
          for (int i = 1; i < formula; i++)
          {
-            int new1 = fnew + i;
-            values[new1][fnews] = 'X';
-            values[fnews][new1] = 'X';
+            std::cout << "Fnew es = a ";
+            std::cout << fnew;
+            values[fnew + i][fnews] = 'X';
+            values[fnews][fnew + i] = 'X';
             std::cout << i << "\n";
-            std::cout << new1 << " _\n";
             std::cout << fnew << "\n";
-            if (new1 == (lead * 2))
+            if /*-->*/((i + fnew) == (lead * 2) + 1)
             {
                std::cout << "vvvvvvvv";
-               int ii = new1;
+               int ii = i;
                for (int vi = ii; vi <= formula; vi++)
                {
                   for (int rest = 0; rest < 2; rest++)
