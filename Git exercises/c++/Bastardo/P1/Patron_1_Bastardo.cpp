@@ -8,6 +8,7 @@
 
 int main()
 {
+   int a;
    int vueltas = 0;
    char vals[4] = {'W','X','Y','Z'};
    char content[12][12];
@@ -87,6 +88,8 @@ int main()
          }
       }
    }
+
+std::cin>>a;
 
    return 0;
 }
