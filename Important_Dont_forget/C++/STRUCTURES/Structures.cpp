@@ -23,6 +23,8 @@ int main()
 
     SmartPhone Sansung_A1;
     SmartPhone Sansung_A2;
+    SmartPhone Sansung_A3;
+
 
     Sansung_A1.name = "Sansung_A1";
     Sansung_A1.storage = 32;
@@ -34,8 +36,15 @@ int main()
     Sansung_A2.color = "White";
     Sansung_A2.price = 5000;
 
+    Sansung_A3.name = "Sansung_A3";
+    Sansung_A3.storage = 300;
+    Sansung_A3.color = "Red";
+    Sansung_A3.price = 9999;
+
+
     Print_smartPhone_Info(Sansung_A1);
     Print_smartPhone_Info(Sansung_A2);
+    Print_smartPhone_Info(Sansung_A3);
 
     return 0;
 }
