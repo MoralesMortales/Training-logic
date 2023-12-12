@@ -10,7 +10,7 @@ struct A1{
 
 //grafos -- Arbol binario
 
-void reocorreA1(struct A1 * start){
+void recorreA1(struct A1 * start){
     struct A1 *sptr = start;
     if (start != NULL)
     {
@@ -23,6 +23,13 @@ void reocorreA1(struct A1 * start){
     cout<<endl;
      
 }
+}
+
+int ubicarValor(struct A1 *start,  int valor, struct A1 * & ptrRet){
+//buscar un valor dentro del anillo
+//retorna 1 si el valor esta en el anillo, si no 0
+//Si esta en el anillo el parametro ptrRet apunta a la estructura que contiene al valor
+
 }
 
 int main(int argc, char const *argv[])
@@ -51,7 +58,7 @@ int main(int argc, char const *argv[])
     //forma anillo
 
     sptr -> ptr = root;
-    reocorreA1(root);
+    recorreA1(root);
     
     return 0;
 }
