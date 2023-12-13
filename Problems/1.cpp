@@ -27,7 +27,7 @@ Constraints:
 
 2 <= nums.length <= 104
 -109 <= nums[i] <= 109
--109 <= target <= 109
+-109 <= target <= 109aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 Only one valid answer exists.
 
 
@@ -84,7 +84,7 @@ int main(int argc, char const *argv[])
         }
     }
 
-    if (option_numbers == 'y')
+    if (option_numbers == 'n')
     {
         for (int i = 0; i < n; i++)
         {
