@@ -27,7 +27,7 @@ Constraints:
 
 2 <= nums.length <= 104
 -109 <= nums[i] <= 109
--109 <= target <= 109aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+-109 <= target <= 109
 Only one valid answer exists.
 
 
@@ -39,7 +39,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 int main(int argc, char const *argv[])
 {
-    int n;
+    int n, counter = 0, answer, solved = 0;
     bool is_right = false;
     char option_numbers;
 
@@ -113,10 +113,20 @@ int main(int argc, char const *argv[])
     std::cout<<"What is your target?: ";
     std::cin>>target;
 
-    for (int i = 0; i < n; i++)
+while (answer != 1){
+
+  for (int i = 0; i <= n; i++)
+  {
+    int val1 = 0,val2 = 0,val3 = 0,val4 = 0;
+    
+    if (array[i] <= target)
     {
-        //continue
+        
     }
+    
+  }
+  counter++;
+}
     
 
     return 0;
