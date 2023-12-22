@@ -39,7 +39,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 int main(int argc, char const *argv[])
 {
-    int n, counter = 0, answer, solved = 0;
+    int n, counter = 0, answer = 0, solved = 0;
     bool is_right = false;
     char option_numbers;
 
@@ -113,21 +113,44 @@ int main(int argc, char const *argv[])
     std::cout<<"What is your target?: ";
     std::cin>>target;
 
-while (answer != 1){
+int val[n];
 
-  for (int i = 0; i <= n; i++)
-  {
-    int val1 = 0,val2 = 0,val3 = 0,val4 = 0;
-    
-    if (array[i] <= target)
-    {
-        
-    }
-    
-  }
-  counter++;
+for (int i = 0; i < n; i++)
+{
+    val[i] = 0;
 }
-    
 
+
+std::cout<<"Inicio"<<std::endl;
+while (answer != 1 && counter != n){
+for (int b = 0; b < n; b++)
+{
+    for (int count = 0; count <= counter; count++)
+    {
+    
+    val[counter] += array[b+counter]; 
+
+    if (val[counter] == target)
+    {
+        for (int s = 0; s < n; s++)
+        {
+            std::cout<<val[counter]<<std::endl;
+        }
+        
+        std::cout<<"Hora de Celebrar"<<std::endl;
+        answer == 1;
+        counter = n - 1;
+        break;
+    }
+
+    else if(answer != 1){
+        continue;
+    }
+
+    }
+
+}
+counter++;
+}
     return 0;
 }
