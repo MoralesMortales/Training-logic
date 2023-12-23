@@ -122,35 +122,8 @@ for (int i = 0; i < n; i++)
 
 
 std::cout<<"Inicio"<<std::endl;
-while (answer != 1 && counter != n){
-for (int b = 0; b < n; b++)
-{
-    for (int count = 0; count <= counter; count++)
-    {
-    
-    val[counter] += array[b+counter]; 
 
-    if (val[counter] == target)
-    {
-        for (int s = 0; s < n; s++)
-        {
-            std::cout<<val[counter]<<std::endl;
-        }
-        
-        std::cout<<"Hora de Celebrar"<<std::endl;
-        answer == 1;
-        counter = n - 1;
-        break;
-    }
 
-    else if(answer != 1){
-        continue;
-    }
 
-    }
-
-}
-counter++;
-}
     return 0;
 }
