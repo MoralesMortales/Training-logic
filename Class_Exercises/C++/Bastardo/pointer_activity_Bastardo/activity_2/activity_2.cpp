@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std; //complete
+using namespace std; //complete by CML
 
 struct box
 {
@@ -74,8 +74,7 @@ void printAll(struct box *pointerbase)
 
     if (pointerbase != NULL)
     {
-            cout << nptr->content << " | ";
-            nptr = nptr -> pointer;
+
 
         do
         {
