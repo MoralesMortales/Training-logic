@@ -53,7 +53,6 @@ int main(){
 	
 	conectarFilas(origen,origen2);
 	conectarFilas(origen2,origen3);
-	
 	imprimirMatriz(origen);
 	
 	return 0;
