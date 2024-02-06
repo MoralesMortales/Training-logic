@@ -1,12 +1,17 @@
 #include <vector>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
+string secret = "ouo";
+
+void funct(){
+    cout<<secret<<"\n";
+}
+
 int main(int argc, char const *argv[])
 {
-
-vector <int> numeros_1__to__5; 
-
+    cout<<"e "<<::secret;
     return 0;
 }
